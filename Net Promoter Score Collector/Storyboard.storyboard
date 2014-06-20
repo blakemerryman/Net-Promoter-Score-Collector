@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Score Table View Controller - Net Promoter Score-->
+        <!--Score Table View Controller - Net Promoter Scores-->
         <scene sceneID="STR-q3-ywK">
             <objects>
                 <tableViewController id="K5H-D1-tFR" customClass="NPScoreTableViewController" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                             <outlet property="delegate" destination="K5H-D1-tFR" id="ZpN-eT-RQn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Net Promoter Score" id="TVg-Xk-R4r"/>
+                    <navigationItem key="navigationItem" title="Net Promoter Scores" id="TVg-Xk-R4r"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJR-aC-gdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
