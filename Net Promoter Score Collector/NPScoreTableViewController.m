@@ -11,7 +11,8 @@
 
 @interface NPScoreTableViewController ()
 
-@property (nonatomic, weak) NSArray *scoreTokenImages;
+@property (nonatomic, strong) NSArray *scoreTokenImages;
+@property (nonatomic, strong) NSMutableArray *scoreCollector;
 
 @end
 
@@ -31,12 +32,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Initialize array of NPS Token images
-    self.scoreTokenImages = [NSArray arrayWithObjects:
-                               @"NPScoreToken-1.png", @"NPScoreToken-2.png",
-                               @"NPScoreToken-3.png", @"NPScoreToken-4.png",
-                               @"NPScoreToken-5.png", @"NPScoreToken-6.png",
-                               @"NPScoreToken-7.png", @"NPScoreToken-8.png",
-                               @"NPScoreToken-9.png", @"NPScoreToken-10.png", nil];
+    self.scoreTokenImages = @[@"NPScoreToken-1.png", @"NPScoreToken-2.png",
+                              @"NPScoreToken-3.png", @"NPScoreToken-4.png",
+                              @"NPScoreToken-5.png", @"NPScoreToken-6.png",
+                              @"NPScoreToken-7.png", @"NPScoreToken-8.png",
+                              @"NPScoreToken-9.png", @"NPScoreToken-10.png"];
 }
 
 - (void)didReceiveMemoryWarning
