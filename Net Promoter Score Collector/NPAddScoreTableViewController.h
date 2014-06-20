@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NetPromoterScore.h"
+
+@protocol NPAddScoreTableViewControllerDelegate;
 
 @interface NPAddScoreTableViewController : UITableViewController
 
+// Reference to delegate
+@property (nonatomic, weak) id <NPAddScoreTableViewControllerDelegate> delegate;
+
+@end
+
+@protocol NPAddScoreTableViewControllerDelegate
+-(void)addScoreViewControllerDidCancel:(NetPromoterScore *)npsToDelete;
+-(void)addScoreViewControllerDidSave;
 @end

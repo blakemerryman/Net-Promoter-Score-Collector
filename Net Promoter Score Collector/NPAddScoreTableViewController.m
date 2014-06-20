@@ -10,6 +10,8 @@
 
 @interface NPAddScoreTableViewController ()
 
+@property (strong, nonatomic) NetPromoterScore *nps;
+
 @property (weak, nonatomic) IBOutlet UITextField *scoreValueTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
 @property (weak, nonatomic) IBOutlet UITextView *commentsTextView;
