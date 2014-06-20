@@ -21,6 +21,8 @@
 // Manual synthesis for property; wanted to use underscore for quick access.
 @synthesize fetchedResultsController = _fetchedResultsController;
 
+#pragma mark - Lifecycle methods
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,6 +32,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // Perform fetch and check for errors...
+    NSError *error = nil;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        NSLog(@"Error! %@",error);
+        abort();
+    }
     
     // Initialize array of NPS Token images
     self.scoreTokenImages = @[@"NPScoreToken-1.png", @"NPScoreToken-2.png",
@@ -97,14 +106,17 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    // Fetch selected nps
     NetPromoterScore *nps = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    // Set the image based upon score value
-    // TODO: some method that returns proper image ???
+    // Set the image based upon the NPScore's value
+    // (Score's "value - 1" used to get token image from Zero-based array that stores them)
+    cell.imageView.image = [UIImage imageNamed:[self.scoreTokenImages objectAtIndex:([[nps value]integerValue]- 1)]];
     
-    // Format and set score as the text label
-    // TODO: this will eventually be the date displayed here
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)[[nps value] integerValue]];
+    // Format and set text label to date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    cell.textLabel.text = [dateFormatter stringFromDate:[nps date]];
     
     return cell;
 }
