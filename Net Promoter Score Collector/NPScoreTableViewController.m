@@ -164,7 +164,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -172,7 +171,15 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"AddNPS"]) {
+        NPAddScoreTableViewController *astvc = (NPAddScoreTableViewController *)[segue destinationViewController];
+        astvc.delegate = self;
+        NetPromoterScore *newNPS = (NetPromoterScore *) [NSEntityDescription insertNewObjectForEntityForName:@"NetPromoterScore"
+                                                                                      inManagedObjectContext:self.managedObjectContext];
+        astvc.currentNPS = newNPS;
+    }
 }
-*/
+
 
 @end

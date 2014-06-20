@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="Net Promoter Scores" id="TVg-Xk-R4r">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pjT-7k-xbR">
                             <connections>
-                                <segue destination="QNj-D8-Mwn" kind="modal" id="Gtd-MY-FSL"/>
+                                <segue destination="QNj-D8-Mwn" kind="modal" identifier="AddNPS" id="Gtd-MY-FSL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

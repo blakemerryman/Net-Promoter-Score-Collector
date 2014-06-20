@@ -15,6 +15,7 @@
 
 // Reference to delegate
 @property (nonatomic, weak) id <NPAddScoreTableViewControllerDelegate> delegate;
+@property (strong, nonatomic) NetPromoterScore *currentNPS;
 
 @end
 

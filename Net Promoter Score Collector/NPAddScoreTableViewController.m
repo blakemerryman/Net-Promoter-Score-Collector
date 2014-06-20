@@ -10,8 +10,6 @@
 
 @interface NPAddScoreTableViewController ()
 
-@property (strong, nonatomic) NetPromoterScore *nps;
-
 @property (weak, nonatomic) IBOutlet UITextField *scoreValueTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
 @property (weak, nonatomic) IBOutlet UITextView *commentsTextView;
@@ -22,24 +20,20 @@
 
 @implementation NPAddScoreTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // Format and load score value...
+    self.scoreValueTextField.text = [NSString stringWithFormat:@"%ld",(long)self.currentNPS.value.integerValue];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Format and load date...
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    self.dateTextField.text = [dateFormatter stringFromDate:self.currentNPS.date];
+    
+    // Load comments...
+    self.commentsTextView.text = self.currentNPS.comment;
 }
 
 - (void)didReceiveMemoryWarning
