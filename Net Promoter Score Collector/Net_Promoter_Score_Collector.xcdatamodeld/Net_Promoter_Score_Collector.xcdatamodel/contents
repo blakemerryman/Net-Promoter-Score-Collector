@@ -3,7 +3,7 @@
     <entity name="NetPromoterScore" representedClassName="NetPromoterScore" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String" defaultValueString="ENTER COMMENTS HERE!!!" syncable="YES"/>
         <attribute name="date" attributeType="Date" defaultDateTimeInterval="410292000" defaultValueString="January 1, 2014" syncable="YES"/>
-        <attribute name="value" attributeType="Integer 64" minValueString="1" maxValueString="10" defaultValueString="10" syncable="YES"/>
+        <attribute name="value" attributeType="Integer 64" syncable="YES"/>
     </entity>
     <elements>
         <element name="NetPromoterScore" positionX="-54" positionY="-9" width="128" height="90"/>

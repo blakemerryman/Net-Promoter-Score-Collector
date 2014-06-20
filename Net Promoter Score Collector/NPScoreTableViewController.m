@@ -201,12 +201,6 @@
 
 - (IBAction)unwindToRootViewControllerViaSave:(UIStoryboardSegue *)unwindSegue
 {
-    // Get source view controller that we are unwinding from
-    NPAddScoreTableViewController *astvc = unwindSegue.destinationViewController;
-    
-    // Get NPS from source view controller
-    NetPromoterScore *newNPS = astvc.currentNPS;
-    
     // Save and check for errors
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
@@ -215,17 +209,15 @@
     
     // Dismiss view controller
     [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"NPAddScoreTableViewController dismissed via SAVE successfully!");
+        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via SAVE!");
     }];
 }
 
 - (IBAction)unwindToRootViewControllerViaCancel:(UIStoryboardSegue *)unwindSegue
 {
-    
-    
     // Dismiss view controller
     [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"NPAddScoreTableViewController dismissed via CANCEL successfully!");
+        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via CANCEL!");
     }];
 }
 
