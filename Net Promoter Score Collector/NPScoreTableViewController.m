@@ -7,8 +7,11 @@
 //
 
 #import "NPScoreTableViewController.h"
+#import "NetPromoterScore.h"
 
 @interface NPScoreTableViewController ()
+
+@property (nonatomic, weak) NSArray *arrayOfScoreTokens;
 
 @end
 
@@ -16,15 +19,6 @@
 
 // Manual synthesis for property; wanted to use underscore for quick access.
 @synthesize fetchedResultsController = _fetchedResultsController;
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -45,21 +39,23 @@
 
 #pragma mark - Fetched Results Controller implementation
 
--(NSFetchedResultsController *)fetchedResultsController {
-    
+-(NSFetchedResultsController *)fetchedResultsController
+{
     // If fetchedResultsController exists exists...
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
     
     // Otherwise, we need to create one...
-    
+    // Initialize fetch request and entity
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"NetPromoterScore"
                                               inManagedObjectContext:self.managedObjectContext];
     
     [fetchRequest setEntity:entity];
 
+    // Sort fetched items by value
+    // TODO: by default, sort by ... ?
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"value"
                                                                    ascending:YES];
     
@@ -88,16 +84,22 @@
     return [sectionInfo numberOfObjects];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    NetPromoterScore *nps = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Set the image based upon score value
+    // TODO: some method that returns proper image ???
+    
+    // Format and set score as the text label
+    // TODO: this will eventually be the date displayed here
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)[[nps value] integerValue]];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
