@@ -12,7 +12,6 @@
 @interface NPScoreTableViewController ()
 
 @property (nonatomic, strong) NSArray *scoreTokenImages;
-@property (nonatomic, strong) NSMutableArray *scoreCollector;
 
 @end
 
@@ -26,12 +25,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Perform fetch and check for errors...
     NSError *error = nil;
@@ -168,12 +161,27 @@
 
 -(void)addScoreViewControllerDidSave
 {
+    // Save and check for errors
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Error! %@", error);
+    }
     
+    // Dismiss view controller
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"NPAddScoreTableViewController dismissed successfully!");
+    }];
 }
 
 -(void)addScoreViewControllerDidCancel:(NetPromoterScore *)npsToDelete
 {
-    
+    // Delete passed in NPS object from context
+    [self.managedObjectContext deleteObject:npsToDelete];
+
+    // Dismiss view controller
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"NPAddScoreTableViewController dismissed successfully!");
+    }];
 }
 
 #pragma mark - Navigation
