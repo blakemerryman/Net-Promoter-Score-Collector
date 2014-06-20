@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46B4D8581954A15600CA7924 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D8571954A15600CA7924 /* Foundation.framework */; };
+		46B4D85A1954A15600CA7924 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D8591954A15600CA7924 /* CoreGraphics.framework */; };
+		46B4D85C1954A15600CA7924 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D85B1954A15600CA7924 /* UIKit.framework */; };
+		46B4D85E1954A15600CA7924 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D85D1954A15600CA7924 /* CoreData.framework */; };
+		46B4D8641954A15600CA7924 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B4D8621954A15600CA7924 /* InfoPlist.strings */; };
+		46B4D8661954A15600CA7924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D8651954A15600CA7924 /* main.m */; };
+		46B4D86A1954A15600CA7924 /* NPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D8691954A15600CA7924 /* NPAppDelegate.m */; };
+		46B4D86D1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D86B1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld */; };
+		46B4D86F1954A15600CA7924 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B4D86E1954A15600CA7924 /* Images.xcassets */; };
+		46B4D8761954A15600CA7924 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D8751954A15600CA7924 /* XCTest.framework */; };
+		46B4D8771954A15600CA7924 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D8571954A15600CA7924 /* Foundation.framework */; };
+		46B4D8781954A15600CA7924 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D85B1954A15600CA7924 /* UIKit.framework */; };
+		46B4D8791954A15600CA7924 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D85D1954A15600CA7924 /* CoreData.framework */; };
+		46B4D8811954A15600CA7924 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B4D87F1954A15600CA7924 /* InfoPlist.strings */; };
+		46B4D8831954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D8821954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46B4D87A1954A15600CA7924 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46B4D84C1954A15600CA7924 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46B4D8531954A15600CA7924;
+			remoteInfo = "Net Promoter Score Collector";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		46B4D8541954A15600CA7924 /* Net Promoter Score Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Net Promoter Score Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46B4D8571954A15600CA7924 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		46B4D8591954A15600CA7924 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		46B4D85B1954A15600CA7924 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		46B4D85D1954A15600CA7924 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		46B4D8611954A15600CA7924 /* Net Promoter Score Collector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Net Promoter Score Collector-Info.plist"; sourceTree = "<group>"; };
+		46B4D8631954A15600CA7924 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		46B4D8651954A15600CA7924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46B4D8671954A15600CA7924 /* Net Promoter Score Collector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Net Promoter Score Collector-Prefix.pch"; sourceTree = "<group>"; };
+		46B4D8681954A15600CA7924 /* NPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPAppDelegate.h; sourceTree = "<group>"; };
+		46B4D8691954A15600CA7924 /* NPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPAppDelegate.m; sourceTree = "<group>"; };
+		46B4D86C1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Net_Promoter_Score_Collector.xcdatamodel; sourceTree = "<group>"; };
+		46B4D86E1954A15600CA7924 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		46B4D8741954A15600CA7924 /* Net Promoter Score CollectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Net Promoter Score CollectorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46B4D8751954A15600CA7924 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		46B4D87E1954A15600CA7924 /* Net Promoter Score CollectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Net Promoter Score CollectorTests-Info.plist"; sourceTree = "<group>"; };
+		46B4D8801954A15600CA7924 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		46B4D8821954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Net_Promoter_Score_CollectorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46B4D8511954A15600CA7924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B4D85A1954A15600CA7924 /* CoreGraphics.framework in Frameworks */,
+				46B4D85E1954A15600CA7924 /* CoreData.framework in Frameworks */,
+				46B4D85C1954A15600CA7924 /* UIKit.framework in Frameworks */,
+				46B4D8581954A15600CA7924 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46B4D8711954A15600CA7924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B4D8761954A15600CA7924 /* XCTest.framework in Frameworks */,
+				46B4D8791954A15600CA7924 /* CoreData.framework in Frameworks */,
+				46B4D8781954A15600CA7924 /* UIKit.framework in Frameworks */,
+				46B4D8771954A15600CA7924 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46B4D84B1954A15600CA7924 = {
+			isa = PBXGroup;
+			children = (
+				46B4D85F1954A15600CA7924 /* Net Promoter Score Collector */,
+				46B4D87C1954A15600CA7924 /* Net Promoter Score CollectorTests */,
+				46B4D8561954A15600CA7924 /* Frameworks */,
+				46B4D8551954A15600CA7924 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46B4D8551954A15600CA7924 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46B4D8541954A15600CA7924 /* Net Promoter Score Collector.app */,
+				46B4D8741954A15600CA7924 /* Net Promoter Score CollectorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46B4D8561954A15600CA7924 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46B4D8571954A15600CA7924 /* Foundation.framework */,
+				46B4D8591954A15600CA7924 /* CoreGraphics.framework */,
+				46B4D85B1954A15600CA7924 /* UIKit.framework */,
+				46B4D85D1954A15600CA7924 /* CoreData.framework */,
+				46B4D8751954A15600CA7924 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46B4D85F1954A15600CA7924 /* Net Promoter Score Collector */ = {
+			isa = PBXGroup;
+			children = (
+				46B4D8681954A15600CA7924 /* NPAppDelegate.h */,
+				46B4D8691954A15600CA7924 /* NPAppDelegate.m */,
+				46B4D86E1954A15600CA7924 /* Images.xcassets */,
+				46B4D86B1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld */,
+				46B4D8601954A15600CA7924 /* Supporting Files */,
+			);
+			path = "Net Promoter Score Collector";
+			sourceTree = "<group>";
+		};
+		46B4D8601954A15600CA7924 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46B4D8611954A15600CA7924 /* Net Promoter Score Collector-Info.plist */,
+				46B4D8621954A15600CA7924 /* InfoPlist.strings */,
+				46B4D8651954A15600CA7924 /* main.m */,
+				46B4D8671954A15600CA7924 /* Net Promoter Score Collector-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46B4D87C1954A15600CA7924 /* Net Promoter Score CollectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				46B4D8821954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m */,
+				46B4D87D1954A15600CA7924 /* Supporting Files */,
+			);
+			path = "Net Promoter Score CollectorTests";
+			sourceTree = "<group>";
+		};
+		46B4D87D1954A15600CA7924 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46B4D87E1954A15600CA7924 /* Net Promoter Score CollectorTests-Info.plist */,
+				46B4D87F1954A15600CA7924 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46B4D8531954A15600CA7924 /* Net Promoter Score Collector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46B4D8861954A15600CA7924 /* Build configuration list for PBXNativeTarget "Net Promoter Score Collector" */;
+			buildPhases = (
+				46B4D8501954A15600CA7924 /* Sources */,
+				46B4D8511954A15600CA7924 /* Frameworks */,
+				46B4D8521954A15600CA7924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Net Promoter Score Collector";
+			productName = "Net Promoter Score Collector";
+			productReference = 46B4D8541954A15600CA7924 /* Net Promoter Score Collector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46B4D8731954A15600CA7924 /* Net Promoter Score CollectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46B4D8891954A15600CA7924 /* Build configuration list for PBXNativeTarget "Net Promoter Score CollectorTests" */;
+			buildPhases = (
+				46B4D8701954A15600CA7924 /* Sources */,
+				46B4D8711954A15600CA7924 /* Frameworks */,
+				46B4D8721954A15600CA7924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46B4D87B1954A15600CA7924 /* PBXTargetDependency */,
+			);
+			name = "Net Promoter Score CollectorTests";
+			productName = "Net Promoter Score CollectorTests";
+			productReference = 46B4D8741954A15600CA7924 /* Net Promoter Score CollectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46B4D84C1954A15600CA7924 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Blake Merryman";
+				TargetAttributes = {
+					46B4D8731954A15600CA7924 = {
+						TestTargetID = 46B4D8531954A15600CA7924;
+					};
+				};
+			};
+			buildConfigurationList = 46B4D84F1954A15600CA7924 /* Build configuration list for PBXProject "Net Promoter Score Collector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 46B4D84B1954A15600CA7924;
+			productRefGroup = 46B4D8551954A15600CA7924 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46B4D8531954A15600CA7924 /* Net Promoter Score Collector */,
+				46B4D8731954A15600CA7924 /* Net Promoter Score CollectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46B4D8521954A15600CA7924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B4D8641954A15600CA7924 /* InfoPlist.strings in Resources */,
+				46B4D86F1954A15600CA7924 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46B4D8721954A15600CA7924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B4D8811954A15600CA7924 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46B4D8501954A15600CA7924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B4D86A1954A15600CA7924 /* NPAppDelegate.m in Sources */,
+				46B4D8661954A15600CA7924 /* main.m in Sources */,
+				46B4D86D1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46B4D8701954A15600CA7924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B4D8831954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46B4D87B1954A15600CA7924 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46B4D8531954A15600CA7924 /* Net Promoter Score Collector */;
+			targetProxy = 46B4D87A1954A15600CA7924 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46B4D8621954A15600CA7924 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B4D8631954A15600CA7924 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46B4D87F1954A15600CA7924 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B4D8801954A15600CA7924 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46B4D8841954A15600CA7924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		46B4D8851954A15600CA7924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46B4D8871954A15600CA7924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Net Promoter Score Collector/Net Promoter Score Collector-Prefix.pch";
+				INFOPLIST_FILE = "Net Promoter Score Collector/Net Promoter Score Collector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		46B4D8881954A15600CA7924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Net Promoter Score Collector/Net Promoter Score Collector-Prefix.pch";
+				INFOPLIST_FILE = "Net Promoter Score Collector/Net Promoter Score Collector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		46B4D88A1954A15600CA7924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Net Promoter Score Collector.app/Net Promoter Score Collector";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Net Promoter Score Collector/Net Promoter Score Collector-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Net Promoter Score CollectorTests/Net Promoter Score CollectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		46B4D88B1954A15600CA7924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Net Promoter Score Collector.app/Net Promoter Score Collector";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Net Promoter Score Collector/Net Promoter Score Collector-Prefix.pch";
+				INFOPLIST_FILE = "Net Promoter Score CollectorTests/Net Promoter Score CollectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46B4D84F1954A15600CA7924 /* Build configuration list for PBXProject "Net Promoter Score Collector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46B4D8841954A15600CA7924 /* Debug */,
+				46B4D8851954A15600CA7924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46B4D8861954A15600CA7924 /* Build configuration list for PBXNativeTarget "Net Promoter Score Collector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46B4D8871954A15600CA7924 /* Debug */,
+				46B4D8881954A15600CA7924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46B4D8891954A15600CA7924 /* Build configuration list for PBXNativeTarget "Net Promoter Score CollectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46B4D88A1954A15600CA7924 /* Debug */,
+				46B4D88B1954A15600CA7924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		46B4D86B1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46B4D86C1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodel */,
+			);
+			currentVersion = 46B4D86C1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodel */;
+			path = Net_Promoter_Score_Collector.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 46B4D84C1954A15600CA7924 /* Project object */;
+}
