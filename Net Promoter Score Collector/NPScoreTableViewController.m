@@ -14,6 +14,9 @@
 
 @implementation NPScoreTableViewController
 
+// Manual synthesis for property; wanted to use underscore for quick access.
+@synthesize fetchedResultsController = _fetchedResultsController;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
