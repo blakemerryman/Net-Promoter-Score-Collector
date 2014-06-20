@@ -127,12 +127,12 @@
 			isa = PBXGroup;
 			children = (
 				46B4D86B1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld */,
+				46B4D86E1954A15600CA7924 /* Images.xcassets */,
 				46B4D8681954A15600CA7924 /* NPAppDelegate.h */,
 				46B4D8691954A15600CA7924 /* NPAppDelegate.m */,
-				46B4D86E1954A15600CA7924 /* Images.xcassets */,
-				46B4D8611954A15600CA7924 /* Net Promoter Score Collector-Info.plist */,
-				46B4D8621954A15600CA7924 /* InfoPlist.strings */,
 				46B4D8651954A15600CA7924 /* main.m */,
+				46B4D8621954A15600CA7924 /* InfoPlist.strings */,
+				46B4D8611954A15600CA7924 /* Net Promoter Score Collector-Info.plist */,
 				46B4D8671954A15600CA7924 /* Net Promoter Score Collector-Prefix.pch */,
 			);
 			name = "Supporting Files";
