@@ -148,14 +148,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Score" id="YU4-dA-LAU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FF2-Az-jYc"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dPE-rH-sDM"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FF2-Az-jYc">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="S88-zN-zTC" id="1cr-Gc-QGf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dPE-rH-sDM">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="S88-zN-zTC" id="ZnA-XN-Zh7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelButtonPressed" destination="FF2-Az-jYc" id="sCs-qn-dJI"/>
                         <outlet property="commentsTextView" destination="cBy-hM-mO9" id="fsb-vV-PN3"/>
                         <outlet property="dateTextField" destination="gsm-4I-Ib2" id="MYK-DJ-7ae"/>
-                        <outlet property="saveButtonPressed" destination="dPE-rH-sDM" id="85Q-bk-ipA"/>
                         <outlet property="scoreValueTextField" destination="iL5-75-RDd" id="w5O-pI-XMO"/>
                     </connections>
                 </tableViewController>

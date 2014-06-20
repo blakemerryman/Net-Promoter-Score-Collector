@@ -44,30 +44,45 @@
 
 #pragma mark - UI Actions
 
--(UIBarButtonItem *)cancelButtonPressed
+-(IBAction)cancelButtonPressed:(id)sender
 {
     // dismiss and remove the object
+    // Notify delegate!
+    [self.delegate addScoreViewControllerDidCancel:[self currentNPS]];
 }
 
--(UIBarButtonItem *)saveButtonPressed
+-(IBAction)saveButtonPressed:(id)sender
 {
-    // dismiss and save the context
+    // Save score text as score value
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber *scoreValue = [numberFormatter numberFromString:self.scoreValueTextField.text];
+    [self.currentNPS setValue:scoreValue];
+    
+    // Save date text as date value
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    [self.currentNPS setDate:[dateFormatter dateFromString:self.dateTextField.text]];
+    
+    // Save comment text as comment value
+    [self.currentNPS setComment:self.commentsTextView.text];
+    
+    // Notify delegate!
+    [self.delegate addScoreViewControllerDidSave];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 4;
 }
 
 /*
@@ -130,9 +145,4 @@
 }
 */
 
-- (IBAction)cancelButton:(id)sender {
-}
-
-- (IBAction)saveButton:(id)sender {
-}
 @end
