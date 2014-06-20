@@ -157,32 +157,32 @@
 }
 */
 
-#pragma mark - NPAddScoreTableViewController Delegate Method Implementations
+//#pragma mark - NPAddScoreTableViewController Delegate Method Implementations
+//
+//-(void)addScoreViewControllerDidSave
+//{
+//    // Save and check for errors
+//    NSError *error = nil;
+//    if (![self.managedObjectContext save:&error]) {
+//        NSLog(@"Error! %@", error);
+//    }
+//    
+//    // Dismiss view controller
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        NSLog(@"NPAddScoreTableViewController dismissed via SAVE successfully!");
+//    }];
+//}
 
--(void)addScoreViewControllerDidSave
-{
-    // Save and check for errors
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Error! %@", error);
-    }
-    
-    // Dismiss view controller
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"NPAddScoreTableViewController dismissed successfully!");
-    }];
-}
-
--(void)addScoreViewControllerDidCancel:(NetPromoterScore *)npsToDelete
-{
-    // Delete passed in NPS object from context
-    [self.managedObjectContext deleteObject:npsToDelete];
-
-    // Dismiss view controller
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"NPAddScoreTableViewController dismissed successfully!");
-    }];
-}
+//-(void)addScoreViewControllerDidCancel:(NetPromoterScore *)npsToDelete
+//{
+//    // Delete passed in NPS object from context
+//    [self.managedObjectContext deleteObject:npsToDelete];
+//
+//    // Dismiss view controller
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        NSLog(@"NPAddScoreTableViewController dismissed via CANCEL successfully!");
+//    }];
+//}
 
 #pragma mark - Navigation
 
@@ -193,14 +193,40 @@
         
         NPAddScoreTableViewController *astvc = (NPAddScoreTableViewController *)[segue destinationViewController];
         
-        astvc.delegate = self;
-        
-        NetPromoterScore *newNPS = (NetPromoterScore *)[NSEntityDescription insertNewObjectForEntityForName:@"NetPromoterScore"
-                                                                                     inManagedObjectContext:self.managedObjectContext];
+        NetPromoterScore *newNPS = (NetPromoterScore *)[NSEntityDescription insertNewObjectForEntityForName:@"NetPromoterScore" inManagedObjectContext:self.managedObjectContext];
         
         astvc.currentNPS = newNPS;
     }
 }
 
+- (IBAction)unwindToRootViewControllerViaSave:(UIStoryboardSegue *)unwindSegue
+{
+    // Get source view controller that we are unwinding from
+    NPAddScoreTableViewController *astvc = unwindSegue.destinationViewController;
+    
+    // Get NPS from source view controller
+    NetPromoterScore *newNPS = astvc.currentNPS;
+    
+    // Save and check for errors
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Error! %@", error);
+    }
+    
+    // Dismiss view controller
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"NPAddScoreTableViewController dismissed via SAVE successfully!");
+    }];
+}
+
+- (IBAction)unwindToRootViewControllerViaCancel:(UIStoryboardSegue *)unwindSegue
+{
+    
+    
+    // Dismiss view controller
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"NPAddScoreTableViewController dismissed via CANCEL successfully!");
+    }];
+}
 
 @end

@@ -40,33 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UI Actions
-- (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender
-{
-    // Notify delegate to dismiss & remove the object
-    [self.delegate addScoreViewControllerDidCancel:[self currentNPS]];
-}
-
-- (IBAction)saveButtonPressed:(UIBarButtonItem *)sender
-{
-    // Save score text as score value
-    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
-    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSNumber *scoreValue = [numberFormatter numberFromString:self.scoreValueTextField.text];
-    [self.currentNPS setValue:scoreValue];
-    
-    // Save date text as date value
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    [self.currentNPS setDate:[dateFormatter dateFromString:self.dateTextField.text]];
-    
-    // Save comment text as comment value
-    [self.currentNPS setComment:self.commentsTextView.text];
-    
-    // Notify delegate to dismiss & save!
-    [self.delegate addScoreViewControllerDidSave];
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -130,15 +103,34 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaCancel"]) {
+        
+        // TODO
+        // 1. Need to get managed object context
+        // 2. Need to delete currentNPS from context
+    
+    } else if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaSave"]) {
+
+        // Save score text as score value
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
+        [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSNumber *scoreValue = [numberFormatter numberFromString:self.scoreValueTextField.text];
+        [self.currentNPS setValue:scoreValue];
+        
+        // Save date text as date value
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        [self.currentNPS setDate:[dateFormatter dateFromString:self.dateTextField.text]];
+        
+        // Save comment text as comment value
+        [self.currentNPS setComment:self.commentsTextView.text];
+    
+    }
 }
-*/
 
 @end
