@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Net Promoter Score-->
+        <!--Score Table View Controller - Net Promoter Score-->
         <scene sceneID="STR-q3-ywK">
             <objects>
-                <tableViewController id="K5H-D1-tFR" customClass="NPTableViewController" sceneMemberID="viewController">
+                <tableViewController id="K5H-D1-tFR" customClass="NPScoreTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="qdn-7A-hkh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
