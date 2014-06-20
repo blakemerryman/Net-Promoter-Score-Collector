@@ -26,19 +26,19 @@
 {
     [super viewDidLoad];
     
-    // Perform fetch and check for errors...
-    NSError *error = nil;
-    if (![[self fetchedResultsController] performFetch:&error]) {
-        NSLog(@"Error! %@",error);
-        abort();
-    }
-    
     // Initialize array of NPS Token images
     self.scoreTokenImages = @[@"NPScoreToken-1.png", @"NPScoreToken-2.png",
                               @"NPScoreToken-3.png", @"NPScoreToken-4.png",
                               @"NPScoreToken-5.png", @"NPScoreToken-6.png",
                               @"NPScoreToken-7.png", @"NPScoreToken-8.png",
                               @"NPScoreToken-9.png", @"NPScoreToken-10.png"];
+    
+    // Perform fetch and check for errors...
+    NSError *error = nil;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        NSLog(@"Error! %@",error);
+        abort();
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -189,14 +189,15 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     if ([[segue identifier] isEqualToString:@"AddNPS"]) {
+        
         NPAddScoreTableViewController *astvc = (NPAddScoreTableViewController *)[segue destinationViewController];
+        
         astvc.delegate = self;
-        NetPromoterScore *newNPS = (NetPromoterScore *) [NSEntityDescription insertNewObjectForEntityForName:@"NetPromoterScore"
-                                                                                      inManagedObjectContext:self.managedObjectContext];
+        
+        NetPromoterScore *newNPS = (NetPromoterScore *)[NSEntityDescription insertNewObjectForEntityForName:@"NetPromoterScore"
+                                                                                     inManagedObjectContext:self.managedObjectContext];
+        
         astvc.currentNPS = newNPS;
     }
 }

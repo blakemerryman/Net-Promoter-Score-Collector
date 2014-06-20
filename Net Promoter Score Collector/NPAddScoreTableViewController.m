@@ -13,8 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *scoreValueTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
 @property (weak, nonatomic) IBOutlet UITextView *commentsTextView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButtonPressed;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButtonPressed;
 
 @end
 
@@ -25,7 +23,7 @@
     [super viewDidLoad];
     
     // Format and load score value...
-    self.scoreValueTextField.text = [NSString stringWithFormat:@"%ld",(long)self.currentNPS.value.integerValue];
+    self.scoreValueTextField.text = [NSString stringWithFormat:@"%d",self.currentNPS.value.intValue];
     
     // Format and load date...
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -43,15 +41,13 @@
 }
 
 #pragma mark - UI Actions
-
--(IBAction)cancelButtonPressed:(id)sender
+- (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender
 {
-    // dismiss and remove the object
-    // Notify delegate!
+    // Notify delegate to dismiss & remove the object
     [self.delegate addScoreViewControllerDidCancel:[self currentNPS]];
 }
 
--(IBAction)saveButtonPressed:(id)sender
+- (IBAction)saveButtonPressed:(UIBarButtonItem *)sender
 {
     // Save score text as score value
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
@@ -67,7 +63,7 @@
     // Save comment text as comment value
     [self.currentNPS setComment:self.commentsTextView.text];
     
-    // Notify delegate!
+    // Notify delegate to dismiss & save!
     [self.delegate addScoreViewControllerDidSave];
 }
 

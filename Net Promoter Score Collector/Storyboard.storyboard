@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="Net Promoter Scores" id="TVg-Xk-R4r">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pjT-7k-xbR">
                             <connections>
-                                <segue destination="QNj-D8-Mwn" kind="modal" identifier="AddNPS" id="Gtd-MY-FSL"/>
+                                <segue destination="nEu-sK-Dac" kind="modal" id="2UA-P4-BHM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -150,12 +150,12 @@
                     <navigationItem key="navigationItem" title="New Score" id="YU4-dA-LAU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FF2-Az-jYc">
                             <connections>
-                                <action selector="cancelButtonPressed:" destination="S88-zN-zTC" id="1cr-Gc-QGf"/>
+                                <action selector="cancelButtonPressed:" destination="S88-zN-zTC" id="ej4-FH-5mC"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="dPE-rH-sDM">
                             <connections>
-                                <action selector="saveButtonPressed:" destination="S88-zN-zTC" id="ZnA-XN-Zh7"/>
+                                <action selector="saveButtonPressed:" destination="S88-zN-zTC" id="t3y-Tv-I7O"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -167,7 +167,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbx-i9-kM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2591" y="-335"/>
+            <point key="canvasLocation" x="2620" y="-345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RFz-cL-Tdp">
@@ -188,22 +188,22 @@
             <point key="canvasLocation" x="957" y="46"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="L0I-55-Vdq">
+        <scene sceneID="mhs-NU-GZ4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QNj-D8-Mwn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nEu-sK-Dac" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zXQ-Z9-iXu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cxx-au-Zks">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="S88-zN-zTC" kind="relationship" relationship="rootViewController" id="cWB-Gx-EAO"/>
+                        <segue destination="S88-zN-zTC" kind="relationship" relationship="rootViewController" id="cGh-1G-qar"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lam-dg-67v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cP0-gc-8UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2065" y="-335"/>
+            <point key="canvasLocation" x="2094" y="-345"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
