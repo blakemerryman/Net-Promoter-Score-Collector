@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *scoreValueTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
 @property (weak, nonatomic) IBOutlet UITextView *commentsTextView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButtonPressed;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButtonPressed;
 
 @end
 
@@ -42,6 +44,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UI Actions
+
+-(UIBarButtonItem *)cancelButtonPressed
+{
+    // dismiss and remove the object
+}
+
+-(UIBarButtonItem *)saveButtonPressed
+{
+    // dismiss and save the context
 }
 
 #pragma mark - Table view data source
@@ -120,4 +134,9 @@
 }
 */
 
+- (IBAction)cancelButton:(id)sender {
+}
+
+- (IBAction)saveButton:(id)sender {
+}
 @end
