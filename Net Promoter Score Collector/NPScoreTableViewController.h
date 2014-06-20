@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NPAddScoreTableViewController.h"
 
-@interface NPScoreTableViewController : UITableViewController <NPAddScoreTableViewControllerDelegate>
+@interface NPScoreTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
