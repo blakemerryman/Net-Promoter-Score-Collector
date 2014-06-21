@@ -160,7 +160,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"scoreCell" forIndexPath:indexPath];
     
     // Configure the cell...
     // Fetch selected nps
@@ -202,7 +202,6 @@
         // Pass data into NPAddScoreTVC
         astvc.currentNPS = newNPS;
         
-        NSLog(@"Reached end of prepare for segue!");
     }
 }
 
