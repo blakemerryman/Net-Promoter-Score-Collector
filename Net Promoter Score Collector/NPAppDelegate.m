@@ -16,10 +16,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    // Retrieving the root Navigation controller
+    UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
+    
+    // From rootVC, retrieve the TableVC
+    NPScoreTableViewController * stvc = (NPScoreTableViewController *)[[nav viewControllers]objectAtIndex:0];
+    
+    // Pass in a reference to the managed object context
+    stvc.managedObjectContext = self.managedObjectContext;
+    
     return YES;
 }
 

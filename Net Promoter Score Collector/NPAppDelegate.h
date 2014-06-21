@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NPScoreTableViewController.h"
 
 @interface NPAppDelegate : UIResponder <UIApplicationDelegate>
 
