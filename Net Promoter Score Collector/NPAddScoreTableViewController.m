@@ -65,10 +65,10 @@
 {
     if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaCancel"]) {
         
-        // TODO: 1. Get managed object context
+        // Get managed object context from AppDelegate
         NPAppDelegate *myApp = (NPAppDelegate *)[[UIApplication sharedApplication]delegate];
         
-        // TODO: 2. Delete currentNPS from context
+        // Delete currentNPS from the managed object context
         [myApp.managedObjectContext deleteObject:self.currentNPS];
     
     } else if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaSave"]) {
