@@ -23,9 +23,9 @@
 		46B4D8811954A15600CA7924 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B4D87F1954A15600CA7924 /* InfoPlist.strings */; };
 		46B4D8831954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D8821954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m */; };
 		46B4D88F1954A5AC00CA7924 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B4D88E1954A5AC00CA7924 /* Storyboard.storyboard */; };
-		46B4D89C1954AD6D00CA7924 /* NetPromoterScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D89B1954AD6D00CA7924 /* NetPromoterScore.m */; };
 		46B4D8A01954AD9200CA7924 /* NPScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D89F1954AD9200CA7924 /* NPScoreTableViewController.m */; };
 		46B4D8A31954CD6300CA7924 /* NPAddScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B4D8A21954CD6300CA7924 /* NPAddScoreTableViewController.m */; };
+		46D515591955F32F00F8FBC3 /* NetPromoterScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D515581955F32F00F8FBC3 /* NetPromoterScore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +58,12 @@
 		46B4D8801954A15600CA7924 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		46B4D8821954A15600CA7924 /* Net_Promoter_Score_CollectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Net_Promoter_Score_CollectorTests.m; sourceTree = "<group>"; };
 		46B4D88E1954A5AC00CA7924 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		46B4D89A1954AD6D00CA7924 /* NetPromoterScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetPromoterScore.h; sourceTree = "<group>"; };
-		46B4D89B1954AD6D00CA7924 /* NetPromoterScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetPromoterScore.m; sourceTree = "<group>"; };
 		46B4D89E1954AD9200CA7924 /* NPScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPScoreTableViewController.h; sourceTree = "<group>"; };
 		46B4D89F1954AD9200CA7924 /* NPScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPScoreTableViewController.m; sourceTree = "<group>"; };
 		46B4D8A11954CD6300CA7924 /* NPAddScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAddScoreTableViewController.h; sourceTree = "<group>"; };
 		46B4D8A21954CD6300CA7924 /* NPAddScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAddScoreTableViewController.m; sourceTree = "<group>"; };
+		46D515571955F32F00F8FBC3 /* NetPromoterScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetPromoterScore.h; sourceTree = "<group>"; };
+		46D515581955F32F00F8FBC3 /* NetPromoterScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetPromoterScore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				46B4D86B1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld */,
-				46B4D89A1954AD6D00CA7924 /* NetPromoterScore.h */,
-				46B4D89B1954AD6D00CA7924 /* NetPromoterScore.m */,
+				46D515571955F32F00F8FBC3 /* NetPromoterScore.h */,
+				46D515581955F32F00F8FBC3 /* NetPromoterScore.m */,
 			);
 			name = "CoreData Model";
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46B4D89C1954AD6D00CA7924 /* NetPromoterScore.m in Sources */,
+				46D515591955F32F00F8FBC3 /* NetPromoterScore.m in Sources */,
 				46B4D8A01954AD9200CA7924 /* NPScoreTableViewController.m in Sources */,
 				46B4D8A31954CD6300CA7924 /* NPAddScoreTableViewController.m in Sources */,
 				46B4D86A1954A15600CA7924 /* NPAppDelegate.m in Sources */,

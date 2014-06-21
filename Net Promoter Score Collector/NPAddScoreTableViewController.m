@@ -22,6 +22,7 @@
 {
     [super viewDidLoad];
     
+    /*
     // Format and load score value...
     self.scoreValueTextField.text = [NSString stringWithFormat:@"%d", self.currentNPS.value.intValue];
     
@@ -32,6 +33,7 @@
     
     // Load comments...
     self.commentsTextView.text = self.currentNPS.comment;
+    */
 }
 
 - (void)didReceiveMemoryWarning
