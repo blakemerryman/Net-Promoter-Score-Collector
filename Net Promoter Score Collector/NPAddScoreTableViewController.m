@@ -7,6 +7,7 @@
 //
 
 #import "NPAddScoreTableViewController.h"
+#import "NPAppDelegate.h"
 
 @interface NPAddScoreTableViewController ()
 
@@ -65,9 +66,10 @@
     if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaCancel"]) {
         
         // TODO: 1. Get managed object context
+        NPAppDelegate *myApp = (NPAppDelegate *)[[UIApplication sharedApplication]delegate];
         
         // TODO: 2. Delete currentNPS from context
-        
+        [myApp.managedObjectContext deleteObject:self.currentNPS];
     
     } else if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaSave"]) {
 

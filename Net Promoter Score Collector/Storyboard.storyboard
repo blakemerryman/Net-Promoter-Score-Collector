@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" title="Net Promoter Scores" id="TVg-Xk-R4r">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pjT-7k-xbR">
                             <connections>
-                                <segue destination="Wuj-OL-7O4" kind="modal" identifier="AddNPS" id="fpk-uu-nU6"/>
+                                <segue destination="Wuj-OL-7O4" kind="modal" identifier="AddNPS" modalTransitionStyle="crossDissolve" id="fpk-uu-nU6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
