@@ -183,71 +183,6 @@
     return [[[self.fetchedResultsController sections]objectAtIndex:section]name];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-//#pragma mark - NPAddScoreTableViewController Delegate Method Implementations
-//
-//-(void)addScoreViewControllerDidSave
-//{
-//    // Save and check for errors
-//    NSError *error = nil;
-//    if (![self.managedObjectContext save:&error]) {
-//        NSLog(@"Error! %@", error);
-//    }
-//    
-//    // Dismiss view controller
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        NSLog(@"NPAddScoreTableViewController dismissed via SAVE successfully!");
-//    }];
-//}
-
-//-(void)addScoreViewControllerDidCancel:(NetPromoterScore *)npsToDelete
-//{
-//    // Delete passed in NPS object from context
-//    [self.managedObjectContext deleteObject:npsToDelete];
-//
-//    // Dismiss view controller
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        NSLog(@"NPAddScoreTableViewController dismissed via CANCEL successfully!");
-//    }];
-//}
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -280,21 +215,11 @@
     }
     
     NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via SAVE!");
-    
-//    // Dismiss view controller & log to console
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via SAVE!");
-//    }];
 }
 
 - (IBAction)unwindToRootViewControllerViaCancel:(UIStoryboardSegue *)unwindSegue
 {
     NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via CANCEL!");
-    
-//    // Dismiss view controller & log to console
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via CANCEL!");
-//    }];
 }
 
 @end
