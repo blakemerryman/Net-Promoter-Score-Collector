@@ -86,7 +86,9 @@
         if (self.commentsTextView.text != nil) {
             [self.currentNPS setComment:self.commentsTextView.text];
         }
+        
     }
+    
 }
 
 @end
