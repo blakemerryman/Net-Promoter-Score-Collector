@@ -77,8 +77,72 @@
                                                                       sectionNameKeyPath:nil
                                                                                cacheName:nil];
 
+    // Setting NPScoreTVC as delegate for fetchedResultsController
+    _fetchedResultsController.delegate = self;
+    
     // Return new fetched results controller
     return _fetchedResultsController;
+}
+
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView endUpdates];
+}
+
+-(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate: {
+            NetPromoterScore *changedNPS = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            
+            // Set the image based upon the NPScore's value
+            // (Score's "value - 1" used to get token image from Zero-based array that stores them)
+            cell.imageView.image = [UIImage imageNamed:[self.scoreTokenImages objectAtIndex:([[changedNPS value]integerValue]- 1)]];
+            
+            // Format and set text label to date
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+            [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+            cell.textLabel.text = [dateFormatter stringFromDate:[changedNPS date]];
+        }
+            break;
+        
+        case NSFetchedResultsChangeMove:
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        
+        default:
+            break;
+    }
+}
+
+-(void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - Table view data source
@@ -191,11 +255,19 @@
 {
     if ([[segue identifier] isEqualToString:@"AddNPS"]) {
         
-        NPAddScoreTableViewController *astvc = (NPAddScoreTableViewController *)[segue destinationViewController];
+        // Retrieve nav controller
+        UINavigationController *nav = [segue destinationViewController];
         
+        // Retrieve embedded NPAddScoreTVC from nav
+        NPAddScoreTableViewController *astvc = (NPAddScoreTableViewController *) [[nav viewControllers]objectAtIndex:0];
+        
+        // Create new managed nps object
         NetPromoterScore *newNPS = (NetPromoterScore *)[NSEntityDescription insertNewObjectForEntityForName:@"NetPromoterScore" inManagedObjectContext:self.managedObjectContext];
         
+        // Pass data into NPAddScoreTVC
         astvc.currentNPS = newNPS;
+        
+        NSLog(@"Reached end of prepare for segue!");
     }
 }
 
@@ -207,18 +279,22 @@
         NSLog(@"Error! %@", error);
     }
     
-    // Dismiss view controller
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via SAVE!");
-    }];
+    NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via SAVE!");
+    
+//    // Dismiss view controller & log to console
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via SAVE!");
+//    }];
 }
 
 - (IBAction)unwindToRootViewControllerViaCancel:(UIStoryboardSegue *)unwindSegue
 {
-    // Dismiss view controller
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via CANCEL!");
-    }];
+    NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via CANCEL!");
+    
+//    // Dismiss view controller & log to console
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        NSLog(@"SUCCESS: NPAddScoreTableViewController dismissed via CANCEL!");
+//    }];
 }
 
 @end

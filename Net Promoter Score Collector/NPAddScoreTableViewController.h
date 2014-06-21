@@ -11,6 +11,6 @@
 
 @interface NPAddScoreTableViewController : UITableViewController
 
-@property (strong, nonatomic) NetPromoterScore *currentNPS;
+@property (nonatomic, strong) NetPromoterScore *currentNPS;
 
 @end

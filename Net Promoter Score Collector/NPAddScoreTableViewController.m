@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     // Format and load score value...
-    self.scoreValueTextField.text = [NSString stringWithFormat:@"%d",self.currentNPS.value.intValue];
+    self.scoreValueTextField.text = [NSString stringWithFormat:@"%d", self.currentNPS.value.intValue];
     
     // Format and load date...
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -129,7 +129,7 @@
         
         // Save comment text as comment value
         [self.currentNPS setComment:self.commentsTextView.text];
-    
+        
     }
 }
 
