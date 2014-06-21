@@ -22,18 +22,19 @@
 {
     [super viewDidLoad];
     
-    /*
     // Format and load score value...
     self.scoreValueTextField.text = [NSString stringWithFormat:@"%d", self.currentNPS.value.intValue];
     
-    // Format and load date...
+    // Format & load today's date...
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    self.dateTextField.text = [dateFormatter stringFromDate:self.currentNPS.date];
+    self.dateTextField.text = [dateFormatter stringFromDate:[NSDate date]];
     
-    // Load comments...
-    self.commentsTextView.text = self.currentNPS.comment;
-    */
+    // Load comments, if any...
+    if (self.currentNPS.comment != nil) {
+        self.commentsTextView.text = self.currentNPS.comment;
+    }
+     
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,26 +64,28 @@
 {
     if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaCancel"]) {
         
-        // TODO
-        // 1. Need to get managed object context
-        // 2. Need to delete currentNPS from context
+        // TODO: 1. Get managed object context
+        
+        // TODO: 2. Delete currentNPS from context
+        
     
     } else if ([[segue identifier] isEqualToString:@"unwindToRootViewControllerViaSave"]) {
 
-        // Save score text as score value
+        // Format & Save score string as score value
         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
         [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
         NSNumber *scoreValue = [numberFormatter numberFromString:self.scoreValueTextField.text];
         [self.currentNPS setValue:scoreValue];
         
-        // Save date text as date value
+        // Format & Save date string as date value
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         [self.currentNPS setDate:[dateFormatter dateFromString:self.dateTextField.text]];
         
-        // Save comment text as comment value
-        [self.currentNPS setComment:self.commentsTextView.text];
-        
+        // If any, Save comment string as comment value
+        if (self.commentsTextView.text != nil) {
+            [self.currentNPS setComment:self.commentsTextView.text];
+        }
     }
 }
 
