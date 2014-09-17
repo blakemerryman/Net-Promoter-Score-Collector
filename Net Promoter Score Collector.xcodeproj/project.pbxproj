@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2515260319CA102000BD9E61 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2515260219CA102000BD9E61 /* Test.swift */; };
 		46B4D8581954A15600CA7924 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D8571954A15600CA7924 /* Foundation.framework */; };
 		46B4D85A1954A15600CA7924 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D8591954A15600CA7924 /* CoreGraphics.framework */; };
 		46B4D85C1954A15600CA7924 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B4D85B1954A15600CA7924 /* UIKit.framework */; };
@@ -40,8 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2515260119CA102000BD9E61 /* Net Promoter Score Collector-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Net Promoter Score Collector-Bridging-Header.h"; sourceTree = "<group>"; };
-		2515260219CA102000BD9E61 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		46B4D8541954A15600CA7924 /* Net Promoter Score Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Net Promoter Score Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B4D8571954A15600CA7924 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		46B4D8591954A15600CA7924 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,8 +131,6 @@
 				46B4D89F1954AD9200CA7924 /* NPScoreTableViewController.m */,
 				46B4D8A11954CD6300CA7924 /* NPAddScoreTableViewController.h */,
 				46B4D8A21954CD6300CA7924 /* NPAddScoreTableViewController.m */,
-				2515260119CA102000BD9E61 /* Net Promoter Score Collector-Bridging-Header.h */,
-				2515260219CA102000BD9E61 /* Test.swift */,
 				46B4D89D1954AD7200CA7924 /* CoreData Model */,
 				46B4D8601954A15600CA7924 /* Supporting Files */,
 			);
@@ -287,7 +282,6 @@
 				46D515591955F32F00F8FBC3 /* NetPromoterScore.m in Sources */,
 				46B4D8A01954AD9200CA7924 /* NPScoreTableViewController.m in Sources */,
 				46B4D8A31954CD6300CA7924 /* NPAddScoreTableViewController.m in Sources */,
-				2515260319CA102000BD9E61 /* Test.swift in Sources */,
 				46B4D86A1954A15600CA7924 /* NPAppDelegate.m in Sources */,
 				46B4D8661954A15600CA7924 /* main.m in Sources */,
 				46B4D86D1954A15600CA7924 /* Net_Promoter_Score_Collector.xcdatamodeld in Sources */,
